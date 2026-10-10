@@ -51,18 +51,12 @@ li{margin:6px 0}
 .collab h3 a:hover{text-decoration:underline}
 .hero>div{flex:1;min-width:260px}
 .about{margin:18px 0 0;font-size:17px}
-/* Акценты: к голубому — зелёный, чередуются голубой → зелёный (розовый убран 10.10) */
-:root{--green:#22c38e;--blue-soft:#e3edf8;--green-soft:#dcf7ec}
+/* Акценты — только голубой (зелёный и розовый убраны 10.10) */
+:root{--blue-soft:#e3edf8}
 .pill{border-width:1.5px;font-weight:600;background:var(--blue-soft);border-color:var(--accent);color:#3d6290}
-.pill:nth-of-type(2n){background:var(--green-soft);border-color:var(--green);color:#127a57}
-h2::after{content:"";display:block;width:72px;height:5px;border-radius:5px;margin-top:10px;background:var(--green)}
+h2::after{content:"";display:block;width:72px;height:5px;border-radius:5px;margin-top:10px;background:var(--accent)}
 .contact h2::after{background:#fff;opacity:.85}
 .collab{border-top:4px solid var(--accent)}
-.collab:nth-child(2n){border-top-color:var(--green)}
-.collab:nth-child(2n):hover{border-color:var(--green)}
-.card:nth-child(2n) .row .t i{background:var(--green)}
-.card:nth-child(2n) .big{color:var(--green)}
-.card:nth-child(2n):hover{border-color:var(--green)}
 /* Фон в клетку: тонкая светлая сетка поверх голубого */
 body{background-color:var(--bg);background-image:linear-gradient(rgba(126,157,192,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(126,157,192,.13) 1px,transparent 1px);background-size:26px 26px}
 </style>
