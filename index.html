@@ -73,6 +73,8 @@ h2::after{content:"";display:block;width:72px;height:5px;border-radius:5px;margi
 /* Вся карточка Collaborations — ссылка на видео: на телефоне нажимают на карточку, а не только на название */
 .collab{position:relative}
 .collab h3 a::after{content:"";position:absolute;inset:0;border-radius:14px}
+/* Мобильная версия контактов: плашки в колонку, все по ширине самой широкой (Gmail) (10.10) */
+@media (max-width:640px){.contact-links{display:grid;grid-template-columns:max-content;justify-content:center}.contact a.cbtn{min-width:0}}
 /* Фон в клетку: тонкая светлая сетка поверх голубого */
 body{background-color:var(--bg);background-image:linear-gradient(rgba(126,157,192,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(126,157,192,.13) 1px,transparent 1px);background-size:26px 26px}
 </style>
