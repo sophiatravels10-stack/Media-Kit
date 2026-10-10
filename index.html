@@ -43,6 +43,9 @@ li{margin:6px 0}
 .lg{width:72px;height:72px;border-radius:14px;overflow:hidden;flex:none;display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
 .lg img{width:100%;height:100%;object-fit:contain}
 .collab h3{margin:0 0 2px;font-size:20px}
+.collab,.card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.collab:hover,.card:hover{transform:translateY(-3px) scale(1.015);box-shadow:0 10px 28px rgba(43,69,98,.14);border-color:var(--accent)}
+@media (prefers-reduced-motion:reduce){.collab,.card,.collab h3 a{transition:none}.collab:hover,.card:hover,.collab h3 a:hover{transform:none}}
 .collab h3 a{color:inherit;text-decoration:none;display:inline-block;transition:transform .2s ease;transform-origin:left center}
 .collab h3 a:hover{transform:scale(1.05)}
 .collab h3 a:hover{text-decoration:underline}
