@@ -44,11 +44,8 @@ li{margin:6px 0}
 .lg img{width:100%;height:100%;object-fit:contain}
 .collab h3{margin:0 0 2px;font-size:20px}
 .collab,.card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease,background-color .25s ease}
-.collab:hover,.card:hover{transform:translateY(-3px) scale(1.015);box-shadow:0 10px 28px rgba(43,69,98,.14);border-color:var(--accent)}
 @media (prefers-reduced-motion:reduce){.collab,.card,.collab h3 a{transition:none}.collab:hover,.card:hover,.collab h3 a:hover{transform:none}}
 .collab h3 a{color:inherit;text-decoration:none;display:inline-block;transition:transform .2s ease;transform-origin:left center}
-.collab h3 a:hover{transform:scale(1.05)}
-.collab h3 a:hover{text-decoration:underline}
 .hero>div{flex:1;min-width:260px}
 .about{margin:18px 0 0;font-size:17px}
 /* Акценты — только голубой (зелёный и розовый убраны 10.10) */
@@ -63,10 +60,19 @@ h2::after{content:"";display:block;width:72px;height:5px;border-radius:5px;margi
 .contact h2::after{margin-left:auto;margin-right:auto}
 .contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;width:100%}
 .contact a.cbtn{display:flex;align-items:center;justify-content:center;gap:10px;background:#ffe4ee;color:var(--ink);border-radius:12px;padding:12px 16px;font-size:15px;font-weight:600;text-decoration:none;white-space:nowrap;min-width:190px;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
-.contact a.cbtn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(43,69,98,.18);background:#ffd3e3}
 .cbtn .ci{width:20px;height:20px;flex:none;display:block}
 /* Hover карточек: светло-зелёный (10.10) */
+/* Hover — только на устройствах с мышью: на телефоне первое касание уходило в «наведение», и видео не открывалось (10.10) */
+@media (hover:hover) and (pointer:fine){
+.collab:hover,.card:hover{transform:translateY(-3px) scale(1.015);box-shadow:0 10px 28px rgba(43,69,98,.14);border-color:var(--accent)}
+.collab h3 a:hover{transform:scale(1.05)}
+.collab h3 a:hover{text-decoration:underline}
+.contact a.cbtn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(43,69,98,.18);background:#ffd3e3}
 .collab:hover,.card:hover{background:#e3f7ec;border-color:#a8dfc0}
+}
+/* Вся карточка Collaborations — ссылка на видео: на телефоне нажимают на карточку, а не только на название */
+.collab{position:relative}
+.collab h3 a::after{content:"";position:absolute;inset:0;border-radius:14px}
 /* Фон в клетку: тонкая светлая сетка поверх голубого */
 body{background-color:var(--bg);background-image:linear-gradient(rgba(126,157,192,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(126,157,192,.13) 1px,transparent 1px);background-size:26px 26px}
 </style>
